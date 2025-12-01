@@ -217,6 +217,13 @@ if change_series.empty:
     top_gain = "Keine Daten"
     top_loss = "Keine Daten"
 else:
+   change_series = latest_values["Änderung (%)"].dropna()
+
+if change_series.empty:
+    avg_change = 0
+    top_gain = "Keine Daten"
+    top_loss = "Keine Daten"
+else:
     avg_change = change_series.mean()
     top_gain = change_series.idxmax()
     top_loss = change_series.idxmin()
@@ -358,5 +365,6 @@ else:
 else:
 
     st.info("Noch keine Daten vorhanden. Trage links im Menü Werte ein!")
+
 
 
