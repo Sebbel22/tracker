@@ -154,7 +154,7 @@ if st.sidebar.button("Eintrag speichern"):
 
     st.sidebar.success("Eintrag gespeichert! 🔥")
 
-    st.experimental_rerun()
+    st.rerun()
 
  
 
@@ -357,3 +357,4 @@ if len(df) > 0:
 else:
 
     st.info("Noch keine Daten vorhanden. Trage links im Menü Werte ein!")
+
